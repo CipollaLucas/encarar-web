@@ -27,8 +27,8 @@ const cases={
     result:'Aplicación instalada en dispositivos reales, backend en producción, flujos de staff y socios validados y pruebas de carga sostenidas por encima de 140 req/s.',
     stack:['React Native','Expo','FastAPI','PostgreSQL','Docker','CI/CD','Cloudflare','Monitoring'],
     images:[
-      {src:'assets/projects/horus-home.webp',alt:'Captura real de HorusGym - pantalla de inicio'},
-      {src:'assets/projects/horus-routine.webp',alt:'Captura real de HorusGym - pantalla de rutina'}
+      {src:'HORUS_2.png',alt:'Captura real de HorusGym - pantalla de inicio'},
+      {src:'HORUS_1.png',alt:'Captura real de HorusGym - pantalla de rutina'}
     ]
   },
   crm:{
