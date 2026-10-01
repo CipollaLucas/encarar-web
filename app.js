@@ -45,7 +45,9 @@ const cases={
     role:'Análisis de procesos, integraciones, automatización, consolidación de maestros, deploy y soporte operativo.',
     architecture:'ERP + WooCommerce + integraciones de pagos/facturación + procesos de importación/exportación + automatizaciones.',
     result:'Procesos mensuales consolidados, integraciones de tienda y facturación operativas y reducción de tareas manuales en flujos de negocio.',
-    stack:['ERP','WooCommerce','Integraciones','Pagos','Facturación','Automatización','Operaciones']
+    stack:['ERP','WooCommerce','Integraciones','Pagos','Facturación','Automatización','Operaciones'],
+    image:'assets/projects/erp-main.webp',
+    imageAlt:'Captura real del ERP El Origen - módulo Compras'
   },
   legal:{
     kicker:'SOFTWARE OPERATIVO',
@@ -55,7 +57,9 @@ const cases={
     role:'Diagnóstico, corrección de bugs, mejoras de backend, deploy y resolución de infraestructura/proxy.',
     architecture:'Django + PostgreSQL + Gunicorn + Nginx + Docker + Cloudflare Tunnel.',
     result:'Flujos críticos de edición y vencimientos estabilizados y sistema desplegado en producción con acceso externo confiable.',
-    stack:['Django','PostgreSQL','Docker','Nginx','Cloudflare','Debugging','Deploy']
+    stack:['Django','PostgreSQL','Docker','Nginx','Cloudflare','Debugging','Deploy'],
+    image:'assets/projects/legal-main.webp',
+    imageAlt:'Captura real del sistema de Gestión Legal'
   }
 };
 const drawer=document.getElementById('caseDrawer');
@@ -65,6 +69,8 @@ document.querySelectorAll('.project-open').forEach(btn=>btn.addEventListener('cl
   fill('drawerKicker',item.kicker); fill('drawerTitle',item.title); fill('drawerLead',item.lead);
   fill('drawerProblem',item.problem); fill('drawerRole',item.role); fill('drawerArchitecture',item.architecture); fill('drawerResult',item.result);
   const stack=document.getElementById('drawerStack'); stack.innerHTML=item.stack.map(x=>'<span>'+x+'</span>').join('');
+  const preview=document.getElementById('drawerPreview'), img=document.getElementById('drawerImage');
+  if(item.image&&preview&&img){img.src=item.image;img.alt=item.imageAlt||item.title;preview.hidden=false}else if(preview){preview.hidden=true}
   drawer.classList.add('open'); drawer.setAttribute('aria-hidden','false'); document.body.classList.add('drawer-lock');
 }));
 document.querySelectorAll('[data-close-drawer]').forEach(btn=>btn.addEventListener('click',()=>{
