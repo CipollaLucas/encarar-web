@@ -25,7 +25,11 @@ const cases={
     role:'Diseño de producto, backend, mobile, API, pruebas, performance, infraestructura, CI/CD y despliegue.',
     architecture:'React Native / Expo + FastAPI + PostgreSQL + Docker + Nginx + Cloudflare + GitHub Actions + observabilidad.',
     result:'Aplicación instalada en dispositivos reales, backend en producción, flujos de staff y socios validados y pruebas de carga sostenidas por encima de 140 req/s.',
-    stack:['React Native','Expo','FastAPI','PostgreSQL','Docker','CI/CD','Cloudflare','Monitoring']
+    stack:['React Native','Expo','FastAPI','PostgreSQL','Docker','CI/CD','Cloudflare','Monitoring'],
+    images:[
+      {src:'assets/projects/horus-home.webp',alt:'Captura real de HorusGym - pantalla de inicio'},
+      {src:'assets/projects/horus-routine.webp',alt:'Captura real de HorusGym - pantalla de rutina'}
+    ]
   },
   crm:{
     kicker:'IA APLICADA + AUTOMATIZACIÓN',
@@ -69,8 +73,20 @@ document.querySelectorAll('.project-open').forEach(btn=>btn.addEventListener('cl
   fill('drawerKicker',item.kicker); fill('drawerTitle',item.title); fill('drawerLead',item.lead);
   fill('drawerProblem',item.problem); fill('drawerRole',item.role); fill('drawerArchitecture',item.architecture); fill('drawerResult',item.result);
   const stack=document.getElementById('drawerStack'); stack.innerHTML=item.stack.map(x=>'<span>'+x+'</span>').join('');
-  const preview=document.getElementById('drawerPreview'), img=document.getElementById('drawerImage');
-  if(item.image&&preview&&img){img.src=item.image;img.alt=item.imageAlt||item.title;preview.hidden=false}else if(preview){preview.hidden=true}
+  const preview=document.getElementById('drawerPreview');
+  const previewGrid=document.getElementById('drawerPreviewGrid');
+  if(preview&&previewGrid){
+    if(item.images&&item.images.length){
+      previewGrid.innerHTML=item.images.map(image=>'<img src="'+image.src+'" alt="'+(image.alt||item.title)+'" loading="lazy" />').join('');
+      preview.hidden=false;
+    }else if(item.image){
+      previewGrid.innerHTML='<img src="'+item.image+'" alt="'+(item.imageAlt||item.title)+'" loading="lazy" />';
+      preview.hidden=false;
+    }else{
+      previewGrid.innerHTML='';
+      preview.hidden=true;
+    }
+  }
   drawer.classList.add('open'); drawer.setAttribute('aria-hidden','false'); document.body.classList.add('drawer-lock');
 }));
 document.querySelectorAll('[data-close-drawer]').forEach(btn=>btn.addEventListener('click',()=>{
