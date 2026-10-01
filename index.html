@@ -13,9 +13,8 @@
 <body data-theme="horizon">
   <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
   <header class="topbar">
-    <a class="brand" href="#inicio" aria-label="Lucas Cipolla">
-      <img src="assets/lc-mark.svg" alt="" />
-      <span><strong>Lucas Cipolla</strong><small>APPLIED SYSTEMS & AI</small></span>
+    <a class="brand brand-image" href="#inicio" aria-label="Lucas Cipolla">
+      <img src="LOGO_1.png" alt="Lucas Cipolla — Applied Systems & AI" />
     </a>
     <nav>
       <a href="#proyectos">Proyectos</a><a href="#experiencia">Experiencia</a><a href="#capacidades">Capacidades</a><a href="#sobre-mi">Sobre mí</a>
@@ -51,7 +50,7 @@
         <div class="orbital">
           <div class="system-card">
             <div class="system-top"><span>LC / SYSTEMS</span><span class="live">● LIVE</span></div>
-            <img src="assets/lc-mark.svg" alt="Logo LC" />
+            <img class="hero-logo" src="LOGO_2.png" alt="Monograma LC" />
             <div class="system-title">IDEAS → SISTEMAS → RESULTADOS</div>
             <div class="graph">
               <span style="height:28%"></span><span style="height:44%"></span><span style="height:37%"></span><span style="height:66%"></span><span style="height:58%"></span><span style="height:82%"></span>
@@ -76,32 +75,50 @@
           <div class="project-no">01</div><div class="project-art art-gym"><span class="phone"></span><span class="phone second"></span></div>
           <h3>HorusGym</h3><p>Plataforma integral para gimnasios: web, mobile, API, pagos, rutinas y operación.</p>
           <div class="tags"><span>React Native</span><span>FastAPI</span><span>PostgreSQL</span><span>CI/CD</span></div>
-          <a href="https://github.com/CipollaLucas/gestorGym" target="_blank" rel="noreferrer">Explorar caso <b>↗</b></a>
+          <div class="project-actions"><button class="project-open" data-project="horus">Ver caso <b>→</b></button><a href="https://github.com/CipollaLucas/gestorGym" target="_blank" rel="noreferrer" aria-label="Abrir repositorio de HorusGym">GitHub ↗</a></div>
         </article>
         <article class="project-card reveal tilt">
           <div class="project-no">02</div><div class="project-art art-ai"><span class="node n1"></span><span class="node n2"></span><span class="node n3"></span></div>
           <h3>CRM IA</h3><p>CRM conversacional con agentes, RAG, workflows, WhatsApp, Chatwoot, n8n y modelos locales.</p>
           <div class="tags"><span>Agents</span><span>RAG</span><span>n8n</span><span>Ollama</span></div>
-          <a href="#experiencia">Ver arquitectura <b>→</b></a>
+          <button class="project-open project-wide" data-project="crm">Ver arquitectura <b>→</b></button>
         </article>
         <article class="project-card reveal tilt">
           <div class="project-no">03</div><div class="project-art art-erp"><span class="erp-screen"></span><span class="erp-chart"></span><span class="erp-dot"></span></div>
           <h3>ERP & Operaciones</h3><p>ERP y e-commerce integrados: compras, inventario, medios de pago, logística, reportes y procesos de negocio.</p>
           <div class="tags"><span>ERP</span><span>E-commerce</span><span>Integraciones</span><span>Operaciones</span></div>
-          <a href="#experiencia">Explorar caso <b>→</b></a>
+          <button class="project-open project-wide" data-project="erp">Explorar caso <b>→</b></button>
         </article>
         <article class="project-card reveal tilt">
           <div class="project-no">04</div><div class="project-art art-legal"><span></span><span></span><span></span></div>
           <h3>Gestión Legal</h3><p>Sistema de gestión de causas, vencimientos, documentos y automatizaciones para operación jurídica.</p>
           <div class="tags"><span>Django</span><span>PostgreSQL</span><span>Docker</span><span>Cloudflare</span></div>
-          <a href="#experiencia">Explorar caso <b>→</b></a>
+          <button class="project-open project-wide" data-project="legal">Explorar caso <b>→</b></button>
         </article>
+      </div>
+    </section>
+
+
+    <section class="section recruiter-scan" id="perfil">
+      <div class="scan-shell reveal">
+        <div class="scan-intro">
+          <span class="index">02</span>
+          <p class="kicker">LECTURA RÁPIDA PARA RECRUITERS</p>
+          <h2>Un perfil que conecta <em>producto, código y operación.</em></h2>
+          <p>No me quedo en una sola capa. Puedo entender el problema, diseñar la solución, construirla, desplegarla y medir cómo funciona.</p>
+        </div>
+        <div class="scan-grid">
+          <article><strong>5+</strong><span>Sistemas reales llevados a producción</span></article>
+          <article><strong>140+</strong><span>req/s sostenidos en pruebas de carga de HorusGym</span></article>
+          <article><strong>IA</strong><span>Agents, RAG, evals, modelos locales y automatización</span></article>
+          <article><strong>E2E</strong><span>Producto → desarrollo → CI/CD → observabilidad</span></article>
+        </div>
       </div>
     </section>
 
     <section class="section journey" id="experiencia">
       <div class="section-head reveal">
-        <div><span class="index">02</span><p class="kicker">CÓMO TRABAJO</p><h2>Del problema a producción, <em>sin cortar la cadena.</em></h2></div>
+        <div><span class="index">03</span><p class="kicker">CÓMO TRABAJO</p><h2>Del problema a producción, <em>sin cortar la cadena.</em></h2></div>
         <p>Mi diferencial está en conectar producto, desarrollo, IA e infraestructura, y llevar esa visión hasta un sistema operativo y medible.</p>
       </div>
       <div class="flow reveal">
@@ -114,7 +131,7 @@
 
     <section class="section capabilities" id="capacidades">
       <div class="section-head reveal">
-        <div><span class="index">03</span><p class="kicker">CAPACIDADES</p><h2>Perfil híbrido. <em>Ejecución end-to-end.</em></h2></div>
+        <div><span class="index">04</span><p class="kicker">CAPACIDADES</p><h2>Perfil híbrido. <em>Ejecución end-to-end.</em></h2></div>
       </div>
       <div class="cap-grid">
         <div class="cap reveal"><small>01</small><h3>Software & Producto</h3><p>Aplicaciones web y mobile, APIs, UX orientada a operación y producto digital.</p></div>
@@ -126,7 +143,7 @@
 
     <section class="section about" id="sobre-mi">
       <div class="about-card reveal">
-        <span class="index">04</span>
+        <span class="index">05</span>
         <div><p class="kicker">SOBRE MÍ</p><h2>No me interesa sólo que <em>compile.</em></h2></div>
         <p>Me interesa entender el problema, construir una solución coherente y verla funcionando en producción. Mi recorrido mezcla software engineering, producto, automatización, infraestructura e inteligencia artificial aplicada.</p>
         <a class="primary" href="mailto:lucas@encarar.com.ar">Conversemos <span>↗</span></a>
@@ -134,7 +151,24 @@
     </section>
   </main>
 
-  <footer><div class="brand compact"><img src="assets/lc-mark.svg" alt="" /><span><strong>Lucas Cipolla</strong><small>encarar.com.ar</small></span></div><p>Software · IA · Automatización · Infraestructura</p><span>© 2026 Lucas Cipolla</span></footer>
+  <aside class="case-drawer" id="caseDrawer" aria-hidden="true">
+    <button class="drawer-backdrop" data-close-drawer aria-label="Cerrar detalle"></button>
+    <div class="drawer-panel">
+      <button class="drawer-close" data-close-drawer aria-label="Cerrar">×</button>
+      <p class="drawer-kicker" id="drawerKicker">CASO REAL</p>
+      <h2 id="drawerTitle"></h2>
+      <p class="drawer-lead" id="drawerLead"></p>
+      <div class="drawer-grid">
+        <div><small>PROBLEMA</small><p id="drawerProblem"></p></div>
+        <div><small>MI APORTE</small><p id="drawerRole"></p></div>
+        <div><small>ARQUITECTURA</small><p id="drawerArchitecture"></p></div>
+        <div><small>RESULTADO</small><p id="drawerResult"></p></div>
+      </div>
+      <div class="drawer-stack" id="drawerStack"></div>
+    </div>
+  </aside>
+
+  <footer><div class="footer-brand"><img src="LOGO_1.png" alt="Lucas Cipolla" /></div><p>Software · IA · Automatización · Infraestructura</p><span>© 2026 Lucas Cipolla</span></footer>
   <script src="app.js"></script>
 </body>
 </html>
