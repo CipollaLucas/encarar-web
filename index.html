@@ -72,8 +72,13 @@
 
       <div class="project-grid">
         <article class="project-card reveal tilt">
-          <div class="project-no">01</div><div class="project-art art-gym"><span class="phone"></span><span class="phone second"></span></div>
-          <h3>HorusGym</h3><p>Plataforma integral para gimnasios: web, mobile, API, pagos, rutinas y operación.</p>
+          <div class="project-no">01</div>
+          <div class="project-art project-media project-media-mobile">
+            <img src="assets/projects/horus-home.webp" alt="Captura real de HorusGym - pantalla de inicio" loading="lazy" />
+            <img class="media-secondary" src="assets/projects/horus-routine.webp" alt="Captura real de HorusGym - pantalla de rutina" loading="lazy" />
+            <span class="media-label">CAPTURA REAL</span>
+          </div>
+          <h3>HorusGym</h3><p>Plataforma integral para gimnasios: gestión de socios, rutinas, pagos, progreso y operación desde web + mobile.</p>
           <div class="tags"><span>React Native</span><span>FastAPI</span><span>PostgreSQL</span><span>CI/CD</span></div>
           <div class="project-actions"><button class="project-open" data-project="horus">Ver caso <b>→</b></button><a href="https://github.com/CipollaLucas/gestorGym" target="_blank" rel="noreferrer" aria-label="Abrir repositorio de HorusGym">GitHub ↗</a></div>
         </article>
@@ -167,8 +172,8 @@
       <h2 id="drawerTitle"></h2>
       <p class="drawer-lead" id="drawerLead"></p>
       <div class="drawer-preview" id="drawerPreview" hidden>
-        <img id="drawerImage" src="" alt="" />
-        <span>CAPTURA REAL DEL SISTEMA</span>
+        <div class="drawer-preview-grid" id="drawerPreviewGrid"></div>
+        <span>CAPTURAS REALES DEL SISTEMA</span>
       </div>
       <div class="drawer-grid">
         <div><small>PROBLEMA</small><p id="drawerProblem"></p></div>
