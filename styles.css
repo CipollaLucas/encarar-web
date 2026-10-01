@@ -121,3 +121,42 @@ body[data-theme="night"] .drawer-preview span{background:rgba(6,16,29,.86);color
   .drawer-preview-grid{grid-template-columns:1fr}
   .drawer-preview-grid img:only-child{aspect-ratio:16/9}
 }
+
+/* Fix Horus capture rendering: use user's original PNGs without conversion artifacts */
+.project-media-mobile{grid-template-columns:1fr 1fr;gap:8px;padding:10px;background:linear-gradient(145deg,#080c11,#111923)}
+.project-media-mobile img{object-fit:cover;object-position:top center;image-rendering:auto;filter:none!important}
+.project-media-mobile .media-secondary{transform:translateY(8px)}
+.project-card:hover .project-media-mobile img{filter:none!important}
+.project-card:hover .project-media-mobile .media-secondary{transform:translateY(4px) scale(1.015)}
+
+/* CRM IA — visual preview inspired by a real conversational CRM */
+.crm-preview{padding:12px;background:linear-gradient(145deg,#eaf4ff,#dbeaff);border:1px solid var(--line)}
+.crm-preview:before{display:none}
+.crm-window{width:100%;height:100%;display:grid;grid-template-columns:42px 1fr;border-radius:14px;overflow:hidden;background:#f9fbfe;border:1px solid rgba(32,96,180,.16);box-shadow:0 18px 35px rgba(29,82,145,.14)}
+.crm-sidebar{background:#102238;padding:11px 8px;display:flex;flex-direction:column;align-items:center;gap:11px}
+.crm-brand{width:25px;height:25px;border-radius:8px;background:linear-gradient(135deg,#2c80ff,#57c6ff);display:grid;place-items:center;color:#fff;font:800 9px Space Grotesk}
+.crm-sidebar i{width:19px;height:5px;border-radius:99px;background:rgba(255,255,255,.18)}
+.crm-sidebar i:nth-of-type(1){background:#4aa9ff}
+.crm-main{padding:10px;min-width:0}
+.crm-top{height:26px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(31,91,161,.11);font:600 9px Space Grotesk;color:#163252}
+.crm-top span{font:700 7px Manrope;color:#29a56d}
+.crm-body{height:calc(100% - 30px);display:grid;grid-template-columns:34% 1fr 30%;gap:7px;padding-top:8px}
+.crm-list,.crm-chat,.crm-flow{border:1px solid rgba(31,91,161,.1);border-radius:9px;background:#fff;padding:6px}
+.crm-list{display:flex;flex-direction:column;gap:6px}
+.crm-list span{height:21px;border-radius:6px;background:#edf3fa}
+.crm-list span.active{background:linear-gradient(90deg,#dcecff,#f4f8fd);border-left:2px solid #2884f7}
+.crm-chat{display:flex;flex-direction:column;justify-content:center;gap:6px}
+.crm-chat .bubble{height:22px;border-radius:7px;margin:0;width:78%;background:#edf2f7}
+.crm-chat .bubble.right{align-self:flex-end;background:#dcecff}
+.crm-chat .bubble.small{width:56%;height:16px}
+.crm-flow{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:linear-gradient(180deg,#fbfdff,#edf6ff)}
+.crm-flow small,.crm-flow b,.crm-flow em{font-style:normal;font:700 7px Manrope;padding:5px 6px;border-radius:6px;background:#fff;border:1px solid rgba(32,96,180,.12);color:#2c5e9f;width:90%;text-align:center}
+.crm-flow b{color:#623fc2}
+.crm-flow em{color:#d44669}
+body[data-theme="night"] .crm-preview{background:linear-gradient(145deg,#0d1724,#152537)}
+body[data-theme="night"] .crm-window{background:#0e1824;border-color:rgba(110,175,255,.17)}
+body[data-theme="night"] .crm-main{background:#0f1b28}
+body[data-theme="night"] .crm-top{color:#d9ebff;border-color:rgba(130,190,255,.12)}
+body[data-theme="night"] .crm-list,body[data-theme="night"] .crm-chat,body[data-theme="night"] .crm-flow{background:#132131;border-color:rgba(130,190,255,.12)}
+body[data-theme="night"] .crm-list span,body[data-theme="night"] .crm-chat .bubble{background:#1c2e42}
+body[data-theme="night"] .crm-chat .bubble.right{background:#17395e}
