@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Portfolio profesional de Lucas Cipolla: software, IA, automatización e infraestructura aplicada a sistemas reales." />
+  <title>Lucas Cipolla — Sistemas, IA e Infraestructura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="horizon">
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Lucas Cipolla">
+      <img src="assets/lc-mark.webp" alt="" />
+      <span><strong>Lucas Cipolla</strong><small>APPLIED SYSTEMS & AI</small></span>
+    </a>
+    <nav>
+      <a href="#proyectos">Proyectos</a><a href="#experiencia">Experiencia</a><a href="#capacidades">Capacidades</a><a href="#sobre-mi">Sobre mí</a>
+    </nav>
+    <div class="header-actions">
+      <div class="theme-switch" aria-label="Cambiar versión visual">
+        <button data-set-theme="night" title="Noche"></button>
+        <button data-set-theme="ice" title="Claro"></button>
+        <button data-set-theme="horizon" title="Horizonte"></button>
+      </div>
+      <a class="contact-pill" href="mailto:lucas@encarar.com.ar">Contacto <span>↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">SOFTWARE <i>/</i> IA <i>/</i> AUTOMATIZACIÓN <i>/</i> INFRAESTRUCTURA</p>
+        <h1>Construyo sistemas que funcionan <em>en el mundo real.</em></h1>
+        <p class="lead">Diseño, desarrollo e implemento productos y plataformas que combinan software, IA, automatización e infraestructura para resolver problemas concretos.</p>
+        <div class="hero-actions">
+          <a class="primary" href="#proyectos">Ver mi trabajo <span>→</span></a>
+          <a class="secondary" href="mailto:lucas@encarar.com.ar">Hablemos <span>↗</span></a>
+        </div>
+        <div class="signals">
+          <div><b>Producto</b><span>Web + Mobile</span></div>
+          <div><b>IA aplicada</b><span>RAG + Agents</span></div>
+          <div><b>Operación</b><span>CI/CD + Observabilidad</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="orbital">
+          <div class="system-card">
+            <div class="system-top"><span>LC / SYSTEMS</span><span class="live">● LIVE</span></div>
+            <img src="assets/lc-mark.webp" alt="Logo LC" />
+            <div class="system-title">IDEAS → SISTEMAS → RESULTADOS</div>
+            <div class="graph">
+              <span style="height:28%"></span><span style="height:44%"></span><span style="height:37%"></span><span style="height:66%"></span><span style="height:58%"></span><span style="height:82%"></span>
+            </div>
+            <div class="system-meta"><span>BUILD</span><span>INTEGRATE</span><span>AUTOMATE</span><span>OPERATE</span></div>
+          </div>
+          <span class="orbit o1"></span><span class="orbit o2"></span><span class="orbit o3"></span>
+          <div class="float-chip chip-a">AI / RAG</div><div class="float-chip chip-b">APIs / DATA</div><div class="float-chip chip-c">DEPLOY / OBSERVE</div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#proyectos"><span></span>SCROLL</a>
+    </section>
+
+    <section class="section projects" id="proyectos">
+      <div class="section-head reveal">
+        <div><span class="index">01</span><p class="kicker">PROYECTOS DESTACADOS</p><h2>Sistemas que resuelven <em>problemas reales.</em></h2></div>
+        <p>No muestro ejercicios de portfolio: muestro productos, integraciones y plataformas construidas para usarse.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card reveal tilt">
+          <div class="project-no">01</div><div class="project-art art-gym"><span class="phone"></span><span class="phone second"></span></div>
+          <h3>HorusGym</h3><p>Plataforma integral para gimnasios: web, mobile, API, pagos, rutinas y operación.</p>
+          <div class="tags"><span>React Native</span><span>FastAPI</span><span>PostgreSQL</span><span>CI/CD</span></div>
+          <a href="https://github.com/CipollaLucas/gestorGym" target="_blank" rel="noreferrer">Explorar caso <b>↗</b></a>
+        </article>
+        <article class="project-card reveal tilt">
+          <div class="project-no">02</div><div class="project-art art-ai"><span class="node n1"></span><span class="node n2"></span><span class="node n3"></span></div>
+          <h3>CRM IA</h3><p>CRM conversacional con agentes, RAG, workflows, WhatsApp, Chatwoot, n8n y modelos locales.</p>
+          <div class="tags"><span>Agents</span><span>RAG</span><span>n8n</span><span>Ollama</span></div>
+          <a href="#experiencia">Ver arquitectura <b>→</b></a>
+        </article>
+        <article class="project-card reveal tilt">
+          <div class="project-no">03</div><div class="project-art art-legal"><span></span><span></span><span></span></div>
+          <h3>Gestión Legal</h3><p>Sistema de gestión de causas, vencimientos y automatizaciones para operación jurídica.</p>
+          <div class="tags"><span>Django</span><span>PostgreSQL</span><span>Docker</span><span>Cloudflare</span></div>
+          <a href="#experiencia">Explorar caso <b>→</b></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section journey" id="experiencia">
+      <div class="section-head reveal">
+        <div><span class="index">02</span><p class="kicker">CÓMO TRABAJO</p><h2>Del problema a producción, <em>sin cortar la cadena.</em></h2></div>
+        <p>Mi diferencial está en conectar producto, desarrollo, IA e infraestructura, y llevar esa visión hasta un sistema operativo y medible.</p>
+      </div>
+      <div class="flow reveal">
+        <div><b>01</b><strong>Entender</strong><span>Contexto, negocio y restricciones.</span></div>
+        <i>→</i><div><b>02</b><strong>Diseñar</strong><span>Arquitectura y experiencia.</span></div>
+        <i>→</i><div><b>03</b><strong>Construir</strong><span>Software, IA e integraciones.</span></div>
+        <i>→</i><div><b>04</b><strong>Operar</strong><span>Deploy, métricas y mejora.</span></div>
+      </div>
+    </section>
+
+    <section class="section capabilities" id="capacidades">
+      <div class="section-head reveal">
+        <div><span class="index">03</span><p class="kicker">CAPACIDADES</p><h2>Perfil híbrido. <em>Ejecución end-to-end.</em></h2></div>
+      </div>
+      <div class="cap-grid">
+        <div class="cap reveal"><small>01</small><h3>Software & Producto</h3><p>Aplicaciones web y mobile, APIs, UX orientada a operación y producto digital.</p></div>
+        <div class="cap reveal"><small>02</small><h3>IA aplicada</h3><p>Agents, RAG, evaluación, modelos locales, prompts y automatización inteligente.</p></div>
+        <div class="cap reveal"><small>03</small><h3>Automatización</h3><p>Workflows, integraciones, WhatsApp, n8n, APIs y procesos conectados.</p></div>
+        <div class="cap reveal"><small>04</small><h3>Infraestructura</h3><p>Docker, CI/CD, observabilidad, networking, despliegue y operación.</p></div>
+      </div>
+    </section>
+
+    <section class="section about" id="sobre-mi">
+      <div class="about-card reveal">
+        <span class="index">04</span>
+        <div><p class="kicker">SOBRE MÍ</p><h2>No me interesa sólo que <em>compile.</em></h2></div>
+        <p>Me interesa entender el problema, construir una solución coherente y verla funcionando en producción. Mi recorrido mezcla software engineering, producto, automatización, infraestructura e inteligencia artificial aplicada.</p>
+        <a class="primary" href="mailto:lucas@encarar.com.ar">Conversemos <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="brand compact"><img src="assets/lc-mark.webp" alt="" /><span><strong>Lucas Cipolla</strong><small>encarar.com.ar</small></span></div><p>Software · IA · Automatización · Infraestructura</p><span>© 2026 Lucas Cipolla</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
