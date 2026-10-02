@@ -44,12 +44,12 @@ const cases={
   erp:{
     kicker:'SISTEMAS DE NEGOCIO',
     title:'ERP & Operaciones',
-    lead:'Integraciones y mejoras sobre procesos reales de compras, e-commerce, pagos, inventario y operación.',
+    lead:'Integraciones y mejoras sobre procesos reales de compras, e-commerce, pagos, inventario, Tango y operación.',
     problem:'Unificar información y automatizar procesos que cruzan compras, catálogo, stock, e-commerce, pagos y logística.',
     role:'Análisis de procesos, integraciones, automatización, consolidación de maestros, deploy y soporte operativo.',
-    architecture:'ERP + WooCommerce + integraciones de pagos/facturación + procesos de importación/exportación + automatizaciones.',
-    result:'Procesos mensuales consolidados, integraciones de tienda y facturación operativas y reducción de tareas manuales en flujos de negocio.',
-    stack:['ERP','WooCommerce','Integraciones','Pagos','Facturación','Automatización','Operaciones'],
+    architecture:'ERP + Tango + WooCommerce + integraciones de pagos/facturación + procesos de importación/exportación + automatizaciones.',
+    result:'Procesos mensuales consolidados, integración con Tango, tienda y facturación operativas y reducción de tareas manuales en flujos de negocio.',
+    stack:['ERP','Tango','WooCommerce','Integraciones','Pagos','Facturación','Automatización','Operaciones'],
     image:'erp_1.png',
     imageAlt:'Captura real del ERP El Origen - módulo Compras'
   },
