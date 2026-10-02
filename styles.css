@@ -240,3 +240,24 @@ box-shadow:0 34px 80px rgba(18,67,125,.09);overflow:hidden;min-height:100%}
 
 /* V1 public profile: no GitHub links exposed */
 .contact-links{grid-template-columns:1fr}
+
+/* V1 screenshot fidelity: keep original PNG quality for real product captures */
+.project-media>img{image-rendering:auto;filter:none!important}
+.project-card:hover .project-media>img{filter:none!important}
+.drawer-preview-grid img{image-rendering:auto;filter:none!important}
+.drawer-preview-grid img:only-child{
+  width:100%;
+  height:auto;
+  max-height:68vh;
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:center top;
+  background:transparent;
+}
+@media(max-width:680px){
+  .drawer-preview-grid img:only-child{
+    height:auto;
+    max-height:none;
+    aspect-ratio:auto;
+  }
+}
