@@ -160,3 +160,54 @@ body[data-theme="night"] .crm-top{color:#d9ebff;border-color:rgba(130,190,255,.1
 body[data-theme="night"] .crm-list,body[data-theme="night"] .crm-chat,body[data-theme="night"] .crm-flow{background:#132131;border-color:rgba(130,190,255,.12)}
 body[data-theme="night"] .crm-list span,body[data-theme="night"] .crm-chat .bubble{background:#1c2e42}
 body[data-theme="night"] .crm-chat .bubble.right{background:#17395e}
+
+/* Professional trajectory */
+.trajectory{position:relative;overflow:hidden}
+.trajectory:before{content:"";position:absolute;width:540px;height:540px;border-radius:50%;right:-240px;top:140px;background:radial-gradient(circle,var(--glow),transparent 68%);filter:blur(12px);pointer-events:none}
+.trajectory-head{display:grid;grid-template-columns:1.22fr .78fr;gap:7vw;align-items:end;margin-bottom:58px}
+.trajectory-head>div{position:relative}
+.trajectory-head h2{font-size:clamp(42px,4.8vw,72px);line-height:1.02;max-width:920px}
+.trajectory-head>p{color:var(--muted);font-size:15px;line-height:1.75;max-width:520px}
+.trajectory-layout{display:grid;grid-template-columns:1.08fr .92fr;gap:28px;align-items:stretch}
+.trajectory-line{position:relative;padding:18px 0 6px 36px}
+.trajectory-line:before{content:"";position:absolute;left:10px;top:34px;bottom:32px;width:1px;background:linear-gradient(var(--accent),var(--line) 20%,var(--line) 80%,var(--accent2))}
+.trajectory-item{position:relative;padding:18px 22px 24px 28px;border-bottom:1px solid var(--line)}
+.trajectory-item:last-child{border-bottom:0}
+.trajectory-dot{position:absolute;left:-31px;top:27px;width:11px;height:11px;border-radius:50%;background:var(--bg2);border:2px solid var(--accent);box-shadow:0 0 0 6px color-mix(in srgb,var(--accent),transparent 88%)}
+.trajectory-item.current .trajectory-dot{background:var(--accent);box-shadow:0 0 0 7px color-mix(in srgb,var(--accent),transparent 84%),0 0 28px var(--glow)}
+.trajectory-meta{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.trajectory-meta small{font:800 9px Manrope;letter-spacing:.18em;color:var(--accent)}
+.trajectory-meta strong{font:600 22px Space Grotesk}
+.trajectory-item p{color:var(--muted);font-size:13px;line-height:1.65;max-width:720px;margin:10px 0 0}
+.conference-card{position:relative;border:1px solid var(--line);border-radius:28px;padding:32px;background:
+linear-gradient(145deg,color-mix(in srgb,var(--panel),transparent 0%),color-mix(in srgb,var(--accent),transparent 94%));
+box-shadow:0 34px 80px rgba(18,67,125,.09);overflow:hidden;min-height:100%}
+.conference-card:before{content:"CACIC";position:absolute;right:-12px;top:52px;font:700 118px Space Grotesk;letter-spacing:-.08em;color:color-mix(in srgb,var(--accent),transparent 94%);transform:rotate(-90deg);transform-origin:center;pointer-events:none}
+.conference-top{display:flex;align-items:center;gap:9px;position:relative;z-index:1}
+.conference-top small{font:800 9px Manrope;letter-spacing:.18em;color:var(--muted)}
+.conference-pulse{width:8px;height:8px;border-radius:50%;background:#24b87b;box-shadow:0 0 0 7px rgba(36,184,123,.12);animation:conferencePulse 2s infinite}
+.conference-number{font:700 clamp(64px,7vw,106px) Space Grotesk;letter-spacing:-.07em;color:var(--accent);line-height:.88;margin:50px 0 10px}
+.conference-label{font:800 9px Manrope;letter-spacing:.18em;color:var(--muted);max-width:340px;line-height:1.6}
+.conference-card h3{font:600 clamp(34px,4vw,54px) Space Grotesk;letter-spacing:-.04em;margin:16px 0 10px}
+.conference-copy{color:var(--muted);font-size:13px;line-height:1.7;max-width:520px}
+.conference-data{display:grid;grid-template-columns:.8fr .8fr 1.4fr;gap:8px;margin:28px 0}
+.conference-data div{padding:14px 12px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:5px}
+.conference-data small{font-size:8px;letter-spacing:.15em;color:var(--muted)}
+.conference-data strong{font:600 12px Space Grotesk}
+.conference-card>a{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid var(--line);font-size:12px;font-weight:800;color:var(--accent)}
+.trajectory-ribbon{margin-top:38px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:15px 0;display:flex;align-items:center;justify-content:space-between;gap:14px;white-space:nowrap;overflow:hidden;color:var(--muted)}
+.trajectory-ribbon span{font:700 9px Manrope;letter-spacing:.16em}
+.trajectory-ribbon i{font-style:normal;color:var(--accent)}
+@keyframes conferencePulse{0%,100%{box-shadow:0 0 0 6px rgba(36,184,123,.10)}50%{box-shadow:0 0 0 12px rgba(36,184,123,0)}}
+@media(max-width:1100px){
+  .trajectory-head,.trajectory-layout{grid-template-columns:1fr}
+  .conference-card{min-height:auto}
+}
+@media(max-width:680px){
+  .trajectory-line{padding-left:26px}
+  .trajectory-meta{display:block}
+  .trajectory-meta strong{display:block;margin-top:6px}
+  .conference-card{padding:24px}
+  .conference-data{grid-template-columns:1fr}
+  .trajectory-ribbon{justify-content:flex-start;overflow-x:auto;padding-bottom:18px}
+}
