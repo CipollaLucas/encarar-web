@@ -211,3 +211,29 @@ box-shadow:0 34px 80px rgba(18,67,125,.09);overflow:hidden;min-height:100%}
   .conference-data{grid-template-columns:1fr}
   .trajectory-ribbon{justify-content:flex-start;overflow-x:auto;padding-bottom:18px}
 }
+
+/* Contact */
+.contact-section{padding:24px clamp(28px,6vw,100px) 110px}
+.contact-card{border:1px solid var(--line);border-radius:30px;padding:48px;background:linear-gradient(135deg,var(--panel),color-mix(in srgb,var(--accent),transparent 94%));display:grid;grid-template-columns:.85fr 1.15fr;gap:58px;align-items:center;box-shadow:0 30px 80px rgba(17,65,120,.08)}
+.contact-copy h2{font:600 clamp(36px,4vw,58px) Space Grotesk;letter-spacing:-.045em;line-height:1.04;margin:14px 0}
+.contact-copy>p:last-child{color:var(--muted);line-height:1.7;max-width:560px}
+.contact-links{display:grid;gap:12px}
+.contact-link{display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:15px;padding:16px 18px;border:1px solid var(--line);border-radius:18px;background:var(--panel);transition:.25s}
+.contact-link:hover{transform:translateX(5px);border-color:color-mix(in srgb,var(--accent),transparent 42%);box-shadow:0 14px 35px rgba(20,70,125,.08)}
+.contact-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--accent),transparent 90%);color:var(--accent);font:800 14px Space Grotesk}
+.contact-link>span:nth-child(2){display:flex;flex-direction:column;gap:4px;min-width:0}
+.contact-link small{font-size:8px;letter-spacing:.16em;color:var(--muted);font-weight:800}
+.contact-link strong{font:600 13px Space Grotesk;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.contact-link>b{font-size:15px;color:var(--accent)}
+.footer-social{display:flex;gap:18px}
+.footer-social a{font-weight:700;transition:.2s}
+.footer-social a:hover{color:var(--accent)}
+@media(max-width:900px){
+  .contact-card{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  .contact-section{padding:10px 20px 80px}
+  .contact-card{padding:28px 20px;border-radius:24px}
+  .contact-link{grid-template-columns:42px minmax(0,1fr) auto;padding:13px}
+  .footer-social{flex-wrap:wrap}
+}
