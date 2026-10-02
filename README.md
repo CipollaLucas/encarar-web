@@ -63,3 +63,10 @@ Abrir: `http://localhost:8080`
 - Sumar screenshots reales
 - Agregar analytics
 - Preparar deploy de encarar.com.ar
+
+
+## Versión actual
+
+**v1.0.0 — primera versión pública**
+
+Incluye identidad visual, selector de temas, proyectos reales, case studies interactivos, trayectoria profesional, CACIC 2026, contacto directo y diseño responsive.
