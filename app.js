@@ -50,7 +50,7 @@ const cases={
     architecture:'ERP + WooCommerce + integraciones de pagos/facturación + procesos de importación/exportación + automatizaciones.',
     result:'Procesos mensuales consolidados, integraciones de tienda y facturación operativas y reducción de tareas manuales en flujos de negocio.',
     stack:['ERP','WooCommerce','Integraciones','Pagos','Facturación','Automatización','Operaciones'],
-    image:'assets/projects/erp-main.webp',
+    image:'erp_1.png',
     imageAlt:'Captura real del ERP El Origen - módulo Compras'
   },
   legal:{
@@ -62,7 +62,7 @@ const cases={
     architecture:'Django + PostgreSQL + Gunicorn + Nginx + Docker + Cloudflare Tunnel.',
     result:'Flujos críticos de edición y vencimientos estabilizados y sistema desplegado en producción con acceso externo confiable.',
     stack:['Django','PostgreSQL','Docker','Nginx','Cloudflare','Debugging','Deploy'],
-    image:'assets/projects/legal-main.webp',
+    image:'legales_2.png',
     imageAlt:'Captura real del sistema de Gestión Legal'
   }
 };
