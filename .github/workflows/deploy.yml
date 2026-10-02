@@ -1,0 +1,49 @@
+name: Deploy Lucas Cipolla Landing
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: lucascipolla-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on:
+      - self-hosted
+      - Linux
+      - X64
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy static site
+        run: |
+          set -euo pipefail
+          mkdir -p /opt/lucascipolla/site
+          find /opt/lucascipolla/site -mindepth 1 -maxdepth 1 -exec rm -rf {} +
+          tar --exclude=.git --exclude=.github -cf - . | tar -C /opt/lucascipolla/site -xf -
+
+      - name: Start web container
+        run: |
+          set -euo pipefail
+          cd /opt/lucascipolla
+          docker compose up -d
+
+      - name: Verify deployment
+        run: |
+          set -euo pipefail
+          for i in 1 2 3 4 5; do
+            if curl --fail --silent --show-error http://127.0.0.1:9092/ >/dev/null; then
+              echo "Landing deployed successfully"
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "Deployment health check failed"
+          docker compose -f /opt/lucascipolla/docker-compose.yml ps
+          exit 1
